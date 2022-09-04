@@ -1,4 +1,5 @@
 FROM ubuntu:latest
+RUN /bin/bash
 RUN useradd -m -p Nopassword javauser
 RUN chmod javauser +x /usr/bin/java
 USER javauser
