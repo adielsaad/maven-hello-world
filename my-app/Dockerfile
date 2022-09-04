@@ -2,11 +2,11 @@ FROM ubuntu:latest
 RUN useradd -m -p Nopassword javauser
 USER javauser
 
-FROM maven:3.6.0-jdk-11-slim AS build
+FROM maven:3.8.6-jdk-8 AS build
 WORKDIR /home/app
 COPY src /home/app/src
-COPY pom.xml /home/app
-RUN mvn clean package -f /home/app/pom.xml
+COPY pom.xml /home/app/
+RUN mvn -f pom.xml clean package 
 
 
 FROM openjdk:8-jre-alpine
