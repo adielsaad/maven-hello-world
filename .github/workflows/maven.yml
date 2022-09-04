@@ -40,4 +40,4 @@ jobs:
       with:
           push: true
           tags: adielsaad/maven-hello-world:latest
-      
+  
