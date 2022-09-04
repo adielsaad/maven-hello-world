@@ -5,7 +5,7 @@ USER javauser
 FROM maven:3.6.0-jdk-11-slim AS build
 WORKDIR /home/app
 COPY src /home/app/src
-COPY ./my-app/pom.xml /home/app
+COPY pom.xml /home/app
 RUN mvn -B package --file ./my-app/pom.xml
 
 FROM openjdk:8-jre-alpine
