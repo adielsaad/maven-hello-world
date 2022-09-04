@@ -36,7 +36,6 @@ jobs:
   docker:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
     - name: Pull
       run: docker pull adielsaad/maven-hello-world 
     - name: Run
