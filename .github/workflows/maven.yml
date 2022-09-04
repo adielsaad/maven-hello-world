@@ -35,14 +35,12 @@ jobs:
       run: docker build -t adielsaad/maven-hello-world ./my-app/
     - name: Push
       run: docker push adielsaad/maven-hello-world
-    - name: Run
-      run: docker run adielsaad/maven-hello-world
   docker:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
-    - name: Set up Docker Buildx
-      uses: docker/setup-buildx-action@v2
+ #   - name: Set up Docker Buildx
+#      uses: docker/setup-buildx-action@v2
     - name: Pull
       run: docker pull adielsaad/maven-hello-world 
     - name: Run
