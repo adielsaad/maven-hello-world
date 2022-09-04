@@ -36,5 +36,5 @@ jobs:
     - name: Push
       run: docker push adielsaad/maven-hello-world
     - name: Run
-      run: docker run -it adielsaad/maven-hello-world
+      run: docker run adielsaad/maven-hello-world
   
