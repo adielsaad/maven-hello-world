@@ -24,6 +24,8 @@ jobs:
         cache: maven
     - name: Build with Maven
       run: mvn -B package --file ./my-app/pom.xml  
+    - name: Tree
+      run: tree
     - name: Login to DockerHub
       uses: docker/login-action@v2
       with:
