@@ -1,7 +1,6 @@
 FROM ubuntu:latest
-RUN /bin/bash
 RUN useradd -m -p Nopassword javauser
-RUN chmod javauser +x /usr/bin/java
+RUN /bin/bash chmod javauser +x /usr/bin/java
 USER javauser
 
 FROM openjdk:8-jre-alpine
