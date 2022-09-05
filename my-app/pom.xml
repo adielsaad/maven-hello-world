@@ -138,7 +138,7 @@
 								<goals>
 									<goal>set</goal>
 								</goals>
-								<phase>validate</phase>
+								<phase>package</phase>
 								<configuration>
 									<newVersion>${parsedVersion.majorVersion}.${parsedVersion.minorVersion}.${parsedVersion.nextIncrementalVersion}</newVersion>
 								</configuration>
