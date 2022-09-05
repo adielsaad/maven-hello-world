@@ -6,7 +6,8 @@ FROM maven:3.8.6-jdk-8 AS build
 WORKDIR /home/app
 COPY src /home/app/src
 COPY pom.xml /home/app/
-RUN mvn -f pom.xml clean package -DbumpPatch
+RUN mvn validate -DbumpPatch
+RUN mvn -f pom.xml clean package
 
 
 FROM openjdk:8-jre-alpine
