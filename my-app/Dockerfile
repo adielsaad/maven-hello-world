@@ -12,5 +12,5 @@ RUN mvn -f pom.xml clean package
 
 FROM openjdk:8-jre-alpine
 WORKDIR /app
-COPY --from=build /home/app/target/my-app-1.0.0.jar /app.jar
+COPY --from=build /home/app/target/my-app-1.0.*.jar /app.jar
 CMD ["/usr/bin/java", "-jar", "/app.jar"]
